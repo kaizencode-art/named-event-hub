@@ -1,4 +1,4 @@
-# Event-Bridge
+# named-event-hub
 
 [![npm version](https://img.shields.io/npm/v/event-bridge.svg)](https://www.npmjs.com/package/event-bridge)
 [![Apache-2.0 License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
