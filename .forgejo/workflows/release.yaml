@@ -1,11 +1,6 @@
-name: CI
-
 on:
   push:
-    branches: [develop]
-  pull_request:
-    branches: [develop]
-
+    tags: ['v*']
 jobs:
   build:
     runs-on: codeberg-small-lazy
@@ -28,3 +23,14 @@ jobs:
 
       - name: Test
         run: npm test
+
+      - name: Debug auth
+        run: npm whoami --registry=https://registry.npmjs.org/
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NAMED_EVENT_HUB_TOKEN }}
+
+      - name: Publish to npm
+        run: npm publish --access public
+        env:
+          NPM_TOKEN: ${{ secrets.NAMED_EVENT_HUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NAMED_EVENT_HUB_TOKEN }}

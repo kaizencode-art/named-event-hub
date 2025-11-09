@@ -1,6 +1,6 @@
 {
-  "name": "event-bridge",
-  "version": "0.0.1",
+  "name": "named-event-hub",
+  "version": "0.0.1-alpha",
   "description": "Type-safe event registry system with emitter/consumer control",
   "type": "module",
   "main": "index.ts",
