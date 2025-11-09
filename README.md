@@ -17,7 +17,7 @@ A type-safe event system enforcing structured communication patterns through sin
 ## Installation
 
 ```bash
-npm install event-bridge
+npm install named-event-hub
 ```
 ## Usage
 Basic Flow
