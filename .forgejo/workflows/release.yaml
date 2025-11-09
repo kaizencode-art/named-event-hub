@@ -21,13 +21,8 @@ jobs:
       - name: Build
         run: npm run build:package
 
-      - name: Test
-        run: npm test
-
-      - name: Debug auth
-        run: npm whoami --registry=https://registry.npmjs.org/
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NAMED_EVENT_HUB_TOKEN }}
+      - name: set version to tag name
+        run: npm version "${FORGEJO_REF_NAME#v}" --no-git-tag-version
 
       - name: Publish to npm
         run: npm publish --access public

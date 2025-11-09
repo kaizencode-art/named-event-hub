@@ -10,6 +10,17 @@
     "start": "web-dev-server",
     "test": "jest"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://codeberg.org/kaizencode/named-event-hub.git"
+  },
+  "files": [
+    "dist/**",
+    "README.md",
+    "LICENSE"
+  ],
+  "bugs": {"url": "https://codeberg.org/kaizencode/named-event-hub/issues"},
+  "homepage": "https://codeberg.org/kaizencode/named-event-hub",
   "keywords": [
     "events",
     "zod",
